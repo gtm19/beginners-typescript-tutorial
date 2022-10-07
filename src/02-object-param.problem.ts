@@ -1,6 +1,20 @@
+import { type } from "os";
 import { expect, it } from "vitest";
 
-export const addTwoNumbers = (params) => {
+// Can declare the type separately:
+// Using type notation
+// type TwoNumbers = {
+//   first: number;
+//   second: number;
+// }
+
+// Using interface notation
+interface TwoNumbers {
+  first: number;
+  second: number;
+}
+
+export const addTwoNumbers = (params: TwoNumbers) => {
   return params.first + params.second;
 };
 
